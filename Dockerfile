@@ -2,8 +2,6 @@ FROM openjdk:8u141-jdk-slim
 
 MAINTAINER Michael Faille <michael@faille.io>
 
-COPY ./code /tmp/play-scala-rest-api-example
-
 RUN apt update && apt install -y gpg apt-transport-https && \
     echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list && \
     cd /var/lib/apt/lists && \
